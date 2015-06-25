@@ -1,2 +1,168 @@
-body h1 {
-  background-color: #fff; }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End hide from IE-mac */
+body {
+  background-image: url("../assets/bg.jpg"); }
+  body header {
+    height: 65px;
+    background-color: white; }
+    body header #headerContainer {
+      background-image: url("../assets/header_bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative; }
+    body header #headerLogoImage {
+      background-image: url("../assets/logo.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 70px; }
+    body header #headerLargeClicky {
+      border: 1px solid orange;
+      color: darkred;
+      float: right;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      vertical-align: center; }
+  body nav {
+    background-color: #424242;
+    height: 30px; }
+    body nav #menuList {
+      width: 100px; }
+    body nav div {
+      position: relative;
+      display: inline-block;
+      width: 2%;
+      color: lightgray;
+      font-size: 25px;
+      font-weight: bold;
+      bottom: 4px; }
+    body nav ul {
+      position: relative;
+      width: 600px;
+      display: block;
+      text-align: center;
+      margin: auto; }
+    body nav li {
+      width: 80px;
+      display: inline-block;
+      color: lightgray;
+      font-size: 16px;
+      font-family: "Oswald";
+      text-align: center; }
+  body .mainDisplay {
+    height: 810px;
+    font-family: "Lato"; }
+    body .mainDisplay .articleList {
+      width: 650px;
+      margin: auto;
+      margin-top: 45px; }
+    body .mainDisplay .article {
+      position: relative;
+      margin: 10px;
+      width: 42%;
+      height: 350px;
+      display: inline-block;
+      padding: 15px;
+      background-color: white;
+      vertical-align: top; }
+    body .mainDisplay .imageContainer {
+      float: top; }
+      body .mainDisplay .imageContainer .image {
+        background-image: url("../assets/pug_500_200.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 200px; }
+    body .mainDisplay h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 10px; }
+    body .mainDisplay h3 {
+      margin: 10px;
+      line-height: 60%; }
+      body .mainDisplay h3 span {
+        font-size: 14px;
+        color: gray; }
+      body .mainDisplay h3 div {
+        position: relative;
+        display: inline-block;
+        width: 2%;
+        color: gray;
+        font-size: 25px;
+        font-weight: bold;
+        bottom: 2px; }
+    body .mainDisplay p {
+      font-size: 14px;
+      margin: 10px;
+      font-weight: 100; }
+  body .footer {
+    position: relative;
+    border: 1px solid blue;
+    float: bottom; }
+    body .footer .footerList {
+      width: 100 px;
+      margin: auto; }
+      body .footer .footerList #footerItem1 {
+        height: 30px;
+        width: 30px;
+        background-image: url("../assets/instagram_grey.svg"); }
+      body .footer .footerList #footerItem2 {
+        height: 30px;
+        width: 30px;
+        background-image: url("../assets/facebook_grey.svg"); }
