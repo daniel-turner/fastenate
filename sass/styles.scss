@@ -172,24 +172,32 @@ body {
 
   .footer {
     position: relative;
-    border: 1px solid blue;
+    background-color: #424242;
     // width: auto:
-    // height: 30px;
+    height: 35px;
     float: bottom;
+
      .footerList {
-        width: 100 px;
+        width: 70px;
+        height: 35px;
         margin: auto;
+        border: 1px solid red;
 
       #footerItem1 {
         height: 30px;
         width: 30px;
         background-image: url("../assets/instagram_grey.svg");
+        background-repeat: no-repeat;
+        display: inline-block;
+        float: left;
       }
       #footerItem2 {
         height: 30px;
         width: 30px;
         background-image: url("../assets/facebook_grey.svg");
-
+        background-repeat: no-repeat;
+        display: inline-block;
+        float: right;
       }
      }
   }

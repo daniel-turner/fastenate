@@ -6,6 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
   <body>
     <div class="container">
@@ -30,9 +31,9 @@
       </nav>
       <div class="mainDisplay">
         <ul class="articleList clearfix">
-          <li class="article">
+          <li id="article1" class="article">
             <div class="imageContainer">
-              <img class="image">
+              <img id="image1" class="image">
             </div>
             <h2 class="articleTitle">Funny & Cute Animals Compilation 2014 New</h2>
             <h3 class="articleMeta">
@@ -44,9 +45,9 @@
             </h3>
             <p class="articleText">Funny and Cute Animals Compilation 2014 New, Hilarious Animals Compilation 2014, Fun,funny,hilarious dogs,horses,goat,cats,...</p>
           </li>
-          <li class="article">
+          <li id="article2" class="article">
             <div class="imageContainer">
-              <img class="image">
+              <img id="image2" class="image">
             </div>
             <h2 class="articleTitle">Top 10 Cutest Animal Videos</h2>
             <h3 class="articleMeta">
@@ -58,9 +59,9 @@
             </h3>
             <p class="articleText">PLEASE LiKE, COMMENT AND SHARE - Thank you for your support! New Compilations of Fails and more every week in best...</p>
           </li>
-          <li class="article">
+          <li id="article3" class="article">
             <div class="imageContainer">
-              <img class="image">
+              <img id="image3" class="image">
             </div>
             <h2 class="articleTitle">Animals Love Bath Time- Super Cute Compilation</h2>
             <h3 class="articleMeta">
@@ -72,9 +73,9 @@
             </h3>
             <p class="articleText">Most peope think that animals just hate taking bath, but this super cute compilation will prove them wrong. These animals...</p>
           </li>
-          <li class="article">
+          <li id="article4" class="article">
             <div class="imageContainer">
-              <img class="image">
+              <img id="image4" class="image">
             </div>
             <h2 class="articleTitle">Cute animals waking each other up - Funny animal compilation</h2>
             <h3 class="articleMeta">
@@ -95,5 +96,14 @@
         </ul>
       </footer>
     </div>
+    <script src="js/data.js"></script>
+    <script src="js/moment.js"></script>
+    <script>
+
+    window.onload = function() {
+
+      var data = Data;
+    };
+    </script>
   </body>
 </html>
