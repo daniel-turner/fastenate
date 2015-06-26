@@ -1,6 +1,56 @@
 var Data = (function() {
 
+  var HTTP_UNSENT = 0;
+  var HTTP_OPENED = 1;
+  var HTTP_HEADERS_RECV = 2;
+  var HTTP_LOADING = 3;
+  var HTTP_DONE = 4;
+  var HTTP_STATUS_OK = 200;
+  var HTTP_STATUS_NOT_FOUND = 404;
+  var HTTP_STATUS_SERVER_ERROR = 500;
+  var HTTP_GET = 'GET';
+
   var httpRequest;
+
+  if(window.XMLHttpRequest) {
+
+    httpRequest = new XMLHttpRequest();
+  }
+
+  if(!httpRequest) {
+
+    throw new Error("Could not create httpRequest");
+  }
+
+  httpRequest.onreadystatechange = function() {
+
+    if(httpRequest.readyState === HTTP_DONE ) {
+
+      if(httpRequest.status === HTTP_STATUS_OK ) {
+
+        updateUI(httpRequest.responseText);
+
+      } else {
+
+        throw new Error("There was a problem with the request.");
+      }
+    }
+  }
+
+  function loadRandom() {
+    httpRequest.open('GET','api/random.json', true);
+    httpRequest.send(null);
+  };
+
+  function loadMyBoards() {
+    httpRequest.open('GET','api/my_boards.json', true);
+    httpRequest.send(null);
+  };
+
+  function loadGetTheApp() {
+    httpRequest.open('GET','api/get_the_app.json', true);
+    httpRequest.send(null);
+  };
 
   function updateUI(responseText) {
 
@@ -17,8 +67,6 @@ var Data = (function() {
 
       updateData = data.data.children[randomIndex].data.url;
 
-      console.log(updateData.indexOf("imgur"));
-
       if(updateData.indexOf("/imgur") !== -1) {
 
         updateData = updateData.replace("/imgur","/i.imgur");
@@ -34,6 +82,11 @@ var Data = (function() {
       //title
       element = document.querySelector("#title" + (i + 1));
       updateData = data.data.children[randomIndex].data.title;
+
+      if(updateData.length > 120) {
+
+        updateData = updateData.slice(0,120) + "...";
+      }
 
       element.innerHTML = updateData;
 
@@ -58,50 +111,10 @@ var Data = (function() {
 
       //description lorem ipsum
       element = document.querySelector("#text" + (i + 1));
-      updateData = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab totam libero temporibus eaque vel nam, velit quos unde expedita distinctio.";
+      updateData = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
 
       element.innerHTML = updateData;
     }
-  };
-
-  if(window.XMLHttpRequest) {
-
-    httpRequest = new XMLHttpRequest();
-  }
-
-  if(!httpRequest) {
-
-    throw new Error("Could not create httpRequest");
-  }
-
-  httpRequest.onreadystatechange = function() {
-
-    if(httpRequest.readyState === 4 ) {
-
-      if(httpRequest.status === 200 ) {
-
-        updateUI(httpRequest.responseText);
-
-      } else {
-
-        throw new Error("There was a problem with the request.");
-      }
-    }
-  }
-
-  function loadRandom() {
-    httpRequest.open('GET','api/random.json', true);
-    httpRequest.send(null);
-  };
-
-  function loadMyBoards() {
-    httpRequest.open('GET','api/my_boards.json', true);
-    httpRequest.send(null);
-  };
-
-  function loadGetTheApp() {
-    httpRequest.open('GET','api/get_the_app.json', true);
-    httpRequest.send(null);
   };
 
   return {

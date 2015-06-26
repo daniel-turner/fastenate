@@ -1,5 +1,10 @@
 @import "partials/reset";
 
+// Media Query Ranges
+$small: "only screen and (max-width: 699px)";
+$medium: "only screen and (min-width: 700px) and (max-width:899px)";
+$large: "only screen and (min-width: 900px)";
+
 body {
 
   background-image: url("../assets/bg.jpg");
@@ -9,20 +14,38 @@ body {
     background-color: white;
 
     #headerContainer {
+
+      position: relative;
+
+      @media #{$medium} {
+
       background-image: url("../assets/header_bg.svg");
       background-repeat: no-repeat;
-      // background-position: center;
       background-position: center;
-      // display: inline-block;
-      position: relative;
+      }
+
+      @media #{$large} {
+
+      background-image: url("../assets/header_bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      }
     }
 
     #headerLogoImage {
       background-image: url("../assets/logo.svg");
       background-repeat: no-repeat;
-      background-position: center;
       height: 70px;
-      // width: 90%;
+
+      @media #{$medium} {
+
+      background-position: center;
+      }
+
+      @media #{$large} {
+
+      background-position: center;
+      }
     }
 
     #headerLargeClicky {
@@ -47,12 +70,12 @@ body {
 
     #menuList {
 
-      //position: center;
       width: 100px;
-      //display: inline-block;
-      // left: 50px;
     }
     div {
+
+      @media #{$medium} {
+
       position:relative;
       display:inline-block;
       width: 2%;
@@ -60,24 +83,60 @@ body {
       font-size: 25px;
       font-weight: bold;
       bottom: 4px;
+      border: 5px solid purple;
+      }
+
+      @media #{$large} {
+
+      position:relative;
+      display:inline-block;
+      width: 2%;
+      color: lightgray;
+      font-size: 25px;
+      font-weight: bold;
+      bottom: 4px;
+      border: 5px solid purple;
+      }
     }
     ul {
       position: relative;
-      width: 600px;
+
       display: block;
       text-align: center;
       margin: auto;
+      border: 5px solid red;
+
+      @media #{$medium} {
+
+        width: 600px;
+      }
+
+      @media #{$large} {
+
+        width: 600px;
+      }
     }
 
     li {
       // position: center;
-      width: 80px;
+      width: 33%;
       display: inline-block;
       color: lightgray;
       font-size: 16px;
       font-family: "Oswald";
       text-align: center;
       // vertical-align: center;
+      border: 5px solid blue;
+
+      @media #{$medium} {
+
+        width: 80px;
+      }
+
+      @media #{$large} {
+
+        width: 80px;
+      }
     }
   }
 
@@ -165,9 +224,7 @@ body {
       // color: gray;
       margin: 10px;
       font-weight: 100;
-
     }
-
   }
 
   .footer {
@@ -177,27 +234,42 @@ body {
     height: 35px;
     float: bottom;
 
+    @media #{$medium} {
+
+      height: 0px;
+    }
+
      .footerList {
         width: 70px;
         height: 35px;
         margin: auto;
-        border: 1px solid red;
+        padding-top: 5px;
+        @media #{$medium} {
+
+          height: 0px;
+        }
 
       #footerItem1 {
-        height: 30px;
-        width: 30px;
+        height: 24px;
+        width: 24px;
         background-image: url("../assets/instagram_grey.svg");
         background-repeat: no-repeat;
-        display: inline-block;
         float: left;
+        @media #{$medium} {
+
+          height: 0px;
+        }
       }
       #footerItem2 {
-        height: 30px;
-        width: 30px;
+        height: 24px;
+        width: 24px;
         background-image: url("../assets/facebook_grey.svg");
         background-repeat: no-repeat;
-        display: inline-block;
         float: right;
+        @media #{$medium} {
+
+          height: 0px;
+        }
       }
      }
   }

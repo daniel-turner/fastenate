@@ -56,15 +56,27 @@ body {
     height: 65px;
     background-color: white; }
     body header #headerContainer {
-      background-image: url("../assets/header_bg.svg");
-      background-repeat: no-repeat;
-      background-position: center;
       position: relative; }
+      @media only screen and (min-width: 700px) and (max-width:899px) {
+        body header #headerContainer {
+          background-image: url("../assets/header_bg.svg");
+          background-repeat: no-repeat;
+          background-position: center; } }
+      @media only screen and (min-width: 900px) {
+        body header #headerContainer {
+          background-image: url("../assets/header_bg.svg");
+          background-repeat: no-repeat;
+          background-position: center; } }
     body header #headerLogoImage {
       background-image: url("../assets/logo.svg");
       background-repeat: no-repeat;
-      background-position: center;
       height: 70px; }
+      @media only screen and (min-width: 700px) and (max-width:899px) {
+        body header #headerLogoImage {
+          background-position: center; } }
+      @media only screen and (min-width: 900px) {
+        body header #headerLogoImage {
+          background-position: center; } }
     body header #headerLargeClicky {
       border: 1px solid orange;
       color: darkred;
@@ -83,27 +95,52 @@ body {
     height: 30px; }
     body nav #menuList {
       width: 100px; }
-    body nav div {
-      position: relative;
-      display: inline-block;
-      width: 2%;
-      color: lightgray;
-      font-size: 25px;
-      font-weight: bold;
-      bottom: 4px; }
+    @media only screen and (min-width: 700px) and (max-width:899px) {
+      body nav div {
+        position: relative;
+        display: inline-block;
+        width: 2%;
+        color: lightgray;
+        font-size: 25px;
+        font-weight: bold;
+        bottom: 4px;
+        border: 5px solid purple; } }
+    @media only screen and (min-width: 900px) {
+      body nav div {
+        position: relative;
+        display: inline-block;
+        width: 2%;
+        color: lightgray;
+        font-size: 25px;
+        font-weight: bold;
+        bottom: 4px;
+        border: 5px solid purple; } }
     body nav ul {
       position: relative;
-      width: 600px;
       display: block;
       text-align: center;
-      margin: auto; }
+      margin: auto;
+      border: 5px solid red; }
+      @media only screen and (min-width: 700px) and (max-width:899px) {
+        body nav ul {
+          width: 600px; } }
+      @media only screen and (min-width: 900px) {
+        body nav ul {
+          width: 600px; } }
     body nav li {
-      width: 80px;
+      width: 33%;
       display: inline-block;
       color: lightgray;
       font-size: 16px;
       font-family: "Oswald";
-      text-align: center; }
+      text-align: center;
+      border: 5px solid blue; }
+      @media only screen and (min-width: 700px) and (max-width:899px) {
+        body nav li {
+          width: 80px; } }
+      @media only screen and (min-width: 900px) {
+        body nav li {
+          width: 80px; } }
   body .mainDisplay {
     height: 810px;
     font-family: "Lato"; }
@@ -156,22 +193,32 @@ body {
     background-color: #424242;
     height: 35px;
     float: bottom; }
+    @media only screen and (min-width: 700px) and (max-width:899px) {
+      body .footer {
+        height: 0px; } }
     body .footer .footerList {
       width: 70px;
       height: 35px;
       margin: auto;
-      border: 1px solid red; }
+      padding-top: 5px; }
+      @media only screen and (min-width: 700px) and (max-width:899px) {
+        body .footer .footerList {
+          height: 0px; } }
       body .footer .footerList #footerItem1 {
-        height: 30px;
-        width: 30px;
+        height: 24px;
+        width: 24px;
         background-image: url("../assets/instagram_grey.svg");
         background-repeat: no-repeat;
-        display: inline-block;
         float: left; }
+        @media only screen and (min-width: 700px) and (max-width:899px) {
+          body .footer .footerList #footerItem1 {
+            height: 0px; } }
       body .footer .footerList #footerItem2 {
-        height: 30px;
-        width: 30px;
+        height: 24px;
+        width: 24px;
         background-image: url("../assets/facebook_grey.svg");
         background-repeat: no-repeat;
-        display: inline-block;
         float: right; }
+        @media only screen and (min-width: 700px) and (max-width:899px) {
+          body .footer .footerList #footerItem2 {
+            height: 0px; } }
