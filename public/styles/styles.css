@@ -121,6 +121,10 @@ body {
       text-align: center;
       margin: auto;
       border: 5px solid red; }
+      @media only screen and (max-width: 699px) {
+        body nav ul .dotDiv {
+          height: 0px;
+          width: 0px; } }
       @media only screen and (min-width: 700px) and (max-width:899px) {
         body nav ul {
           width: 600px; } }
@@ -128,12 +132,14 @@ body {
         body nav ul {
           width: 600px; } }
     body nav li {
+      position: center;
       width: 33%;
       display: inline-block;
       color: lightgray;
       font-size: 16px;
       font-family: "Oswald";
       text-align: center;
+      vertical-align: center;
       border: 5px solid blue; }
       @media only screen and (min-width: 700px) and (max-width:899px) {
         body nav li {

@@ -106,6 +106,14 @@ body {
       margin: auto;
       border: 5px solid red;
 
+      .dotDiv {
+        @media #{$small} {
+
+          height: 0px;
+          width: 0px;
+        }
+      }
+
       @media #{$medium} {
 
         width: 600px;
@@ -118,14 +126,14 @@ body {
     }
 
     li {
-      // position: center;
+      position: center;
       width: 33%;
       display: inline-block;
       color: lightgray;
       font-size: 16px;
       font-family: "Oswald";
       text-align: center;
-      // vertical-align: center;
+      vertical-align: center;
       border: 5px solid blue;
 
       @media #{$medium} {
